@@ -1,0 +1,1077 @@
+/**
+ * استایل‌های صفحه ورود و حساب کاربری
+ * طراحی مدرن و زیبا برای تجربه کاربری بهتر
+ */
+
+/* کانتینر اصلی صفحه ورود */
+.khoshtip-auth-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.khoshtip-auth-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* باکس‌های ورود و ثبت‌نام */
+.khoshtip-auth-box {
+  background: white;
+  border-radius: 20px;
+  padding: 50px 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.khoshtip-auth-box:hover {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+}
+
+/* عنوان و زیرعنوان */
+.khoshtip-auth-title {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #1a202c;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.khoshtip-auth-subtitle {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #718096;
+  font-size: 15px;
+}
+
+/* بخش ورود با Google */
+.google-login-section {
+  margin-bottom: 30px;
+}
+
+.google-login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px; /* Match SMS button padding exactly */
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px; /* Match SMS button font size */
+  font-weight: 600;
+  color: #1a202c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.google-login-button:hover {
+  background: #f7fafc;
+  border-color: #cbd5e0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.google-login-button:active {
+  transform: translateY(0);
+}
+
+.google-login-button svg {
+  width: 20px; /* Match SMS button icon size */
+  height: 20px; /* Match SMS button icon size */
+  flex-shrink: 0;
+}
+
+/* خط جداکننده */
+.google-login-divider {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+  color: #a0aec0;
+  font-size: 14px;
+}
+
+.google-login-divider::before,
+.google-login-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.google-login-divider span {
+  padding: 0 15px;
+}
+
+/* فرم‌های ورود و ثبت‌نام */
+.woocommerce-form-login,
+.woocommerce-form-register {
+  margin: 0;
+}
+
+/* فیلدهای فرم */
+.woocommerce-form-row {
+  margin-bottom: 20px;
+}
+
+.woocommerce-form-row label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2d3748;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.woocommerce-form-row label .required {
+  color: #e53e3e;
+}
+
+.woocommerce-Input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #f7fafc;
+  font-family: inherit;
+}
+
+.woocommerce-Input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* چک‌باکس مرا به خاطر بسپار */
+.woocommerce-form-login__rememberme {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.woocommerce-form__input-checkbox {
+  width: auto !important;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+/* دکمه‌های ورود و ثبت‌نام */
+.woocommerce-button {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.woocommerce-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.woocommerce-button:active {
+  transform: translateY(0);
+}
+
+/* لینک فراموشی رمز عبور */
+.woocommerce-LostPassword {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.woocommerce-LostPassword a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.woocommerce-LostPassword a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* پیام‌های خطا و موفقیت */
+.woocommerce-error,
+.woocommerce-message,
+.woocommerce-info {
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 25px;
+  border: none;
+}
+
+.woocommerce-error {
+  background: #fff5f5;
+  border-right: 4px solid #e53e3e;
+  color: #c53030;
+}
+
+.woocommerce-message {
+  background: #f0fff4;
+  border-right: 44px solid #48bb78;
+  color: #2f855a;
+}
+
+.woocommerce-info {
+  background: #ebf8ff;
+  border-right: 4px solid #4299e1;
+  color: #2c5282;
+}
+
+/* انیمیشن بارگذاری */
+.google-login-button.loading {
+  pointer-events: none;
+  opacity: 0.7;
+  position: relative;
+}
+
+.google-login-button.loading::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #e2e8f0;
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* دکمه ورود با شماره موبایل */
+.sms-login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a202c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sms-login-button:hover {
+  background: #f7fafc;
+  border-color: #cbd5e0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sms-login-button:active {
+  transform: translateY(0);
+}
+
+.sms-login-button svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* مودال ورود با SMS */
+.khoshtip-modal {
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sms-modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.khoshtip-modal-close {
+  color: #a0aec0;
+  float: left;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 20px;
+  transition: color 0.3s ease;
+}
+
+.khoshtip-modal-close:hover,
+.khoshtip-modal-close:focus {
+  color: #1a202c;
+}
+
+.sms-step h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #1a202c;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sms-step p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #718096;
+  font-size: 15px;
+}
+
+.sms-form-group {
+  margin-bottom: 20px;
+}
+
+.sms-input {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: #f7fafc;
+  font-family: inherit;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.sms-input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.sms-button {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.sms-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.sms-button:active {
+  transform: translateY(0);
+}
+
+.sms-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.sms-error {
+  background: #fff5f5;
+  border-right: 4px solid #e53e3e;
+  color: #c53030;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.sms-link-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.sms-link-button:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+#displayPhone {
+  font-weight: 700;
+  color: #667eea;
+  direction: ltr;
+  display: inline-block;
+}
+
+input[type="tel"] {
+  direction: ltr;
+  text-align: right;
+}
+
+.form-text {
+  display: block;
+  margin-top: 8px;
+  color: #718096;
+  font-size: 13px;
+}
+
+/* ================================
+   داشبورد مدرن - Modern Dashboard
+   ================================ */
+
+/* Override کردن تمام wrapper های WooCommerce و Astra */
+.woocommerce-account .woocommerce,
+.woocommerce-account .ast-container,
+.woocommerce-account .site-content,
+.woocommerce-account .ast-separate-container .ast-article-single,
+.woocommerce-account .entry-content {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Override کردن کانتینر اصلی صفحه my-account */
+.woocommerce-MyAccount-content {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.khoshtip-modern-dashboard {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* هدر داشبورد با گرادینت */
+.dashboard-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 32px 20px;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+}
+
+.user-profile-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar-wrapper img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.status-indicator {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  background: #48bb78;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-greeting {
+  margin: 0 0 6px 0;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-email {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+}
+
+/* کارت‌های آمار */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 20px;
+  margin-top: -40px;
+  position: relative;
+  z-index: 2;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.orders-icon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.wishlist-icon {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.address-icon {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a202c;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #718096;
+  font-weight: 500;
+}
+
+/* بخش دسترسی سریع */
+.quick-actions-section {
+  padding: 30px 20px 20px;
+}
+
+.section-title {
+  margin: 0 0 20px 0;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.action-card {
+  background: white;
+  padding: 24px 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.action-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.action-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.purple-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.blue-gradient {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.pink-gradient {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.red-gradient {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.action-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0;
+}
+
+.action-subtitle {
+  font-size: 13px;
+  color: #718096;
+  margin: 0;
+}
+
+/* سفارشات اخیر */
+.recent-orders-section {
+  padding: 30px 20px;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.order-item {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.order-item:hover {
+  transform: translateX(-4px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.order-number {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.order-date {
+  font-size: 13px;
+  color: #718096;
+}
+
+.order-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-completed {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.status-processing {
+  background: #bee3f8;
+  color: #2a4365;
+}
+
+.status-pending {
+  background: #feebc8;
+  color: #7c2d12;
+}
+
+.status-cancelled {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.order-total {
+  font-size: 15px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.view-all-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 16px;
+  background: white;
+  color: #667eea;
+  border: 2px solid white;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.view-all-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* وضعیت خالی */
+.empty-state {
+  background: white;
+  padding: 60px 20px;
+  border-radius: 24px;
+  text-align: center;
+  margin: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.empty-icon {
+  margin-bottom: 24px;
+  color: #cbd5e0;
+}
+
+.empty-title {
+  margin: 0 0 12px 0;
+  color: #1a202c;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.empty-subtitle {
+  margin: 0 0 32px 0;
+  color: #718096;
+  font-size: 15px;
+}
+
+.shop-now-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+.shop-now-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(102, 126, 234, 0.4);
+}
+
+/* ریسپانسیو موبایل */
+@media (max-width: 576px) {
+  .khoshtip-modern-dashboard {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .dashboard-header {
+    padding: 24px 16px;
+    border-radius: 0 0 24px 24px;
+  }
+
+  .user-greeting {
+    font-size: 20px;
+  }
+
+  .user-email {
+    font-size: 13px;
+  }
+
+  .avatar-wrapper img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .stats-grid {
+    padding: 16px;
+    gap: 10px;
+    margin-top: -30px;
+  }
+
+  .stat-card {
+    padding: 16px 12px;
+  }
+
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .stat-value {
+    font-size: 20px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+
+  .quick-actions-section,
+  .recent-orders-section {
+    padding: 24px 16px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .actions-grid {
+    gap: 12px;
+  }
+
+  .action-card {
+    padding: 20px 16px;
+  }
+
+  .action-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .action-title {
+    font-size: 15px;
+  }
+
+  .action-subtitle {
+    font-size: 12px;
+  }
+
+  .order-item {
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .order-status {
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .empty-state {
+    padding: 48px 16px;
+    margin: 16px;
+  }
+
+  .empty-title {
+    font-size: 20px;
+  }
+
+  .empty-subtitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .khoshtip-auth-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .khoshtip-auth-box {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .khoshtip-auth-container {
+    margin: 30px auto;
+  }
+
+  .khoshtip-auth-box {
+    padding: 30px 20px;
+    border-radius: 16px;
+  }
+
+  .khoshtip-auth-title {
+    font-size: 24px;
+  }
+
+  .woocommerce-Input,
+  .woocommerce-button,
+  .google-login-button {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  .sms-login-button {
+    padding: 12px 14px;
+    font-size: 15px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .google-login-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* ================================
+   استایل دسکتاپ برای صفحه حساب کاربری
+   ================================ */
+
+/* اصلاح layout دسکتاپ - فقط برای صفحاتی که داشبورد دارند، نه صفحه ورود */
+@media (min-width: 769px) {
+  /* wrapper اصلی صفحه my-account به صورت flexbox - فقط برای صفحات داشبورد */
+  .woocommerce-account.logged-in .woocommerce {
+    display: flex !important;
+    gap: 30px !important;
+    max-width: 1400px !important;
+    margin: 40px auto !important;
+    padding: 0 20px !important;
+  }
+
+  /* منوی navigation در سمت چپ */
+  .woocommerce-account.logged-in .woocommerce-MyAccount-navigation {
+    flex: 0 0 280px !important;
+    margin: 0 !important;
+  }
+
+  /* کانتینر محتوا در سمت راست */
+  .woocommerce-account.logged-in .woocommerce-MyAccount-content {
+    flex: 1 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* داشبورد مدرن در فضای محتوا */
+  .khoshtip-modern-dashboard {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+  }
+
+  /* هدر داشبورد */
+  .dashboard-header {
+    border-radius: 0 !important;
+  }
+}
+
+/* فقط برای موبایل */
+@media (max-width: 768px) {
+  /* نمایش داشبورد مدرن فقط در موبایل */
+  .khoshtip-modern-dashboard {
+    display: block !important;
+  }
+
+  /* مخفی کردن منوی استاندارد در موبایل */
+  .woocommerce-MyAccount-navigation {
+    display: none !important;
+  }
+}
