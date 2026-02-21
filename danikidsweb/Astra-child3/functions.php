@@ -190,7 +190,7 @@ function khoshtip_get_optimized_product_image($product, $size = 'medium', $attr 
     $image_id = $product->get_image_id();
     
     if (!$image_id) {
-        // اگر تصویر شاخص نداشت، تصویر پیش‌فرض WooCommerce را نمایش بده
+        // اگر تصویر شاخص نداشت، تصویر پیش‌ف��ض WooCommerce را نمایش بده
         return $product->get_image($size, $attr);
     }
     
@@ -508,5 +508,22 @@ function khoshtip_search_products_by_size() {
 
 add_action('wp_ajax_search_products_by_size', 'khoshtip_search_products_by_size');
 add_action('wp_ajax_nopriv_search_products_by_size', 'khoshtip_search_products_by_size');
+
+// تنظیم حداقل تعداد خرید به‌جای 1
+function khoshtip_adjust_quantity_input_args($args, $product) {
+    // دریافت حداقل تعداد خرید ذخیره شده
+    $min_quantity = get_post_meta($product->get_id(), '_min_quantity', true);
+    
+    if (!empty($min_quantity) && is_numeric($min_quantity)) {
+        $min_quantity = intval($min_quantity);
+        // تنظیم حداقل تعداد و مقدار پیش‌فرض
+        $args['min_value'] = $min_quantity;
+        $args['input_value'] = $min_quantity;
+        $args['max_value'] = '';
+    }
+    
+    return $args;
+}
+add_filter('woocommerce_quantity_input_args', 'khoshtip_adjust_quantity_input_args', 10, 2);
 
 ?>
