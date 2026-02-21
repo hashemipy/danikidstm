@@ -1,0 +1,159 @@
+/*
+Theme Name: hashemipy
+Theme URI: https://hashemipy.com
+Description: Child theme for Astra - Children's Clothing Store
+Author: hashemipy
+Author URI: https://hashemipy.com
+Template: astra
+Version: 1.0.0
+Text Domain: khoshtip-kocholo-child
+*/
+
+/* Import Vazirmatn Font */
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap");
+
+/* CSS HSL Color Variables */
+:root {
+  --background: 0 0% 100%; /* White */
+  --foreground: 222.2 47.4% 11.2%; /* Dark Gray for text */
+  --primary: 325 100% 45%; /* Vibrant Pink */
+  --primary-foreground: 355 100% 97%; /* Off-white for text on pink backgrounds */
+  --accent: 325 90% 96%; /* Light Pink */
+  --destructive: 0 84.2% 60.2%; /* Red for sales/alerts */
+  --destructive-foreground: 210 40% 98%; /* White for text on red backgrounds */
+  --border: 214.3 31.8% 91.4%; /* Light Gray */
+  --radius: 0.8rem; /* for rounded corners */
+}
+
+/* Global Font Application */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+div,
+button,
+input,
+textarea,
+select {
+  font-family: "Vazirmatn", sans-serif;
+}
+
+/* RTL Support for Persian */
+body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Color Utility Classes */
+.bg-background {
+  background-color: hsl(var(--background));
+}
+.bg-foreground {
+  background-color: hsl(var(--foreground));
+}
+.bg-primary {
+  background-color: hsl(var(--primary));
+}
+.bg-accent {
+  background-color: hsl(var(--accent));
+}
+.bg-destructive {
+  background-color: hsl(var(--destructive));
+}
+
+.text-background {
+  color: hsl(var(--background));
+}
+.text-foreground {
+  color: hsl(var(--foreground));
+}
+.text-primary {
+  color: hsl(var(--primary));
+}
+.text-primary-foreground {
+  color: hsl(var(--primary-foreground));
+}
+.text-accent {
+  color: hsl(var(--accent));
+}
+.text-destructive {
+  color: hsl(var(--destructive));
+}
+.text-destructive-foreground {
+  color: hsl(var(--destructive-foreground));
+}
+
+.border-primary {
+  border-color: hsl(var(--primary));
+}
+.border-border {
+  border-color: hsl(var(--border));
+}
+
+/* Utility Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Marquee Animation */
+.animate-scroll-alternate {
+  animation: scrollAlternate 120s linear infinite;
+}
+
+@keyframes scrollAlternate {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-alternate:hover {
+  animation-play-state: paused;
+}
+
+/* Rounded Corners */
+.rounded-radius {
+  border-radius: var(--radius);
+}
+
+/* Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide Scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
